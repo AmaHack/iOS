@@ -1,0 +1,129 @@
+
+EVENTFUL API: api.eventful.com
+Username: vishaldevg@gmail.com
+Password: pol0p0lo
+
+PlanATrip - App On Eventful
+Application will help user to plan a trip and show the events based on the trip details.
+>>>>Key: 8FNgK29dwTr5KQ7m (app_key)
+oAuth Consumer Key: 9c7c8b606ea4fb693551
+oAuth Consumer Secret: be5e0ad1b387b9a396a5
+
+
+popular keyword list
+===================
+URL: http://api.evdb.com/json/categories/list?app_key=8FNgK29dwTr5KQ7m
+LIST:
+Concerts & Tour Dates
+Conferences & Tradeshows
+Comedy
+Education
+Kids & Family
+Festivals
+Film
+Food & Wine
+Fundraising & Charity
+Art Galleries & Exhibits
+Health & Wellness
+Holiday
+Literary & Books
+Museums & Attractions
+Neighborhood
+Business & Networking
+Nightlife & Singles
+University & Alumni
+Organizations & Meetups
+Performing Arts
+Pets 
+Politics & Activism
+Sales & Retail 
+Science 
+Religion & Spirituality
+Sports 
+Technology 
+Other & Miscellaneous
+
+
+Personalization based on age factor
+=========================================
+//Getting list of events
+http://api.eventful.com/json/events/search?app_key=8FNgK29dwTr5KQ7m&date=FutureDate&page_size=100&keywords=(Family || "Health & Wellness" || "Religion & Spirituality")&sort_order=popularity&sort_order=ascending
+
+//Getting list of Venues - NOT REQUIRED
+http://api.eventful.com/json/venues/search?app_key=8FNgK29dwTr5KQ7m&date=FutureDate&page_size=100&keywords=(Family || "Health & Wellness" || "Religion & Spirituality")&sort_order=popularity&sort_order=ascending
+
+//ARGUMENTS (PARAMETERS)
+
+>>>keywords string
+The search keywords.(optional)
+Keywords Based on Age FACTOR
+============================
+Health & Wellness
+Religion & Spirituality
+Family
+
+>>>location string - NOT REQUIRED
+A location name to use in filtering the search results. Locations in the form "San Diego", "San Diego, TX", "London, United Kingdom", and "Calgary, Alberta, Canada" are accepted.(optional)
+
+>>>count_only boolean - NOT REQUIRED
+If count_only is set, an abbreviated version of the output will be returned. Only total_items and search_time elements are included in the result. (optional)
+
+>>>page_size integer
+The desired number of results per "page".(optional)
+
+>>>page_number integer - NOT REQUIRED
+The desired "page" number.(optional)
+
+>>>within integer - NOT REQUIRED
+If within is set and the "location" parameter resolves to a specific geolocation, the search will be restricted to the specified radius. If the "location" parameter does not resolve to a specific location, this parameter is ignored.(optional)
+
+>>>units string - NOT REQUIRED
+One of "mi" or "km", the units of the "within" parameter. Defaults to "mi". (optional)
+
+>>>sort_order string
+One of 'popularity', 'relevance', or 'venue_name'. Default is 'relevance'. (optional)
+
+>>>sort_direction string
+One of 'ascending' or 'descending'. Default varies by sort_order. (optional)
+
+
+Personalization based on time of the year
+=========================================
+//Getting list of events
+http://api.eventful.com/json/events/search?app_key=8FNgK29dwTr5KQ7m&date=FutureDate&page_size=100&keywords=(Festivals || Holiday)&sort_order=popularity&sort_order=ascending
+
+//Getting list of Venues - NOT REQUIRED
+http://api.eventful.com/json/venues/search?app_key=8FNgK29dwTr5KQ7m&date=FutureDate&page_size=100&keywords=(Festivals || Holiday)&sort_order=popularity&sort_order=ascending
+
+//ARGUMENTS (PARAMETERS)
+
+>>>keywords string
+The search keywords.(optional)
+Based on Time of the year
+=========================
+Festivals
+Holiday
+
+>>>location string - NOT REQUIRED
+A location name to use in filtering the search results. Locations in the form "San Diego", "San Diego, TX", "London, United Kingdom", and "Calgary, Alberta, Canada" are accepted.(optional)
+
+>>>count_only boolean - NOT REQUIRED
+If count_only is set, an abbreviated version of the output will be returned. Only total_items and search_time elements are included in the result. (optional)
+
+>>>page_size integer
+The desired number of results per "page".(optional)
+
+>>>page_number integer - NOT REQUIRED
+The desired "page" number.(optional)
+
+>>>within integer - NOT REQUIRED
+If within is set and the "location" parameter resolves to a specific geolocation, the search will be restricted to the specified radius. If the "location" parameter does not resolve to a specific location, this parameter is ignored.(optional)
+
+>>>units string - NOT REQUIRED
+One of "mi" or "km", the units of the "within" parameter. Defaults to "mi". (optional)
+
+>>>sort_order string
+One of 'popularity', 'relevance', or 'venue_name'. Default is 'relevance'. (optional)
+
+>>>sort_direction string
+One of 'ascending' or 'descending'. Default varies by sort_order. (optional)
