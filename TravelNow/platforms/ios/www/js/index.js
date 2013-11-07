@@ -39,9 +39,14 @@ var app = {
     // Update DOM on a Received Event
     receivedEvent: function(id)
     {
+	navigator.splashscreen.show();
+
+	setTimeout(function() {
+			   navigator.splashscreen.hide();
+			   }, 3000);
         //navigator.notification.alert("Cordova is working")
         navigator.geolocation.getCurrentPosition(onSuccess, onError);
-        
+    
         function onSuccess(position)
         {
             currLat = position.coords.latitude;
